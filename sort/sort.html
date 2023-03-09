@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang=ru>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sorting</title>
+
+    <script>
+        var numbers = [3, 7, 1, 5, 4, 9];
+        document.write(numbers);
+        var size = numbers.length;
+        for (var current = 0; current < size; current++) {
+            var position = current;
+            for (var index = current; index < size; index++) {
+                if (numbers[index] > numbers[position]) {
+                    position = index;
+                }
+            }
+            var temp = numbers[current];
+            numbers[current] = numbers[position];
+            numbers[position] = temp;
+            document.write("<br>" + numbers);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
